@@ -38,4 +38,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.get('/echo', (req, res) => {
+  const requestBody = req.body;
+  res.json(requestBody);
+});
+
+app.post('/echo', (req, res) => {
+  const requestBody = req.body;
+  res.json(requestBody);
+});
+
 module.exports = app;
